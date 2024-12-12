@@ -8,4 +8,5 @@ class Solution:
             heappush(gifts, -isqrt(x))
             i+=1
         return -sum(gifts)
+
         
