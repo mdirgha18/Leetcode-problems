@@ -61,7 +61,7 @@ class Solution:
             # Calculate the minimum swaps needed to sort this level
             operations += self.minSwapsToSort(level)
 
-        return operations
+        return operations 
 
 
             
