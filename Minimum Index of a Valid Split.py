@@ -15,3 +15,15 @@ class Solution:
             if lcount > (i + 1) // 2 and rcount > (len(nums) - (i + 1)) // 2:
                 return i # Return the index as soon as the conditions are met
         return -1        # Return -1 if no valid index is found
+class Solution:
+    def minimumIndex(self, nums: List[int]) -> int:
+        lcount = 0 
+        dominant, rcount = max(Counter(nums).items(), key = lambda x: x[1])
+
+    for i, x in enumerate(nums):
+        lcount += x == dominant
+        rcount -= x == dominant
+
+    if lcount > (i + 1) // 2 and rcount > (len(nums) - (i + 1) // 2):
+        return i 
+return -1
